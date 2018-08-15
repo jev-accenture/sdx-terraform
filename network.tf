@@ -25,3 +25,8 @@ resource "openstack_networking_router_interface_v2" "terraform" {
   subnet_id = "${openstack_networking_subnet_v2.private_subnet.id}"
 }
 
+resource "openstack_networking_floatingip_v2" "public_ip" {
+  pool       = "${var.public_ip_pool}"
+  depends_on = ["openstack_networking_router_interface_v2.terraform"]
+}
+

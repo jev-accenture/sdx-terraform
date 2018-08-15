@@ -23,3 +23,7 @@ variable "public_network" {
   type = "string"
 }
 
+variable "public_ip_pool" {
+  type = "string"
+}
+

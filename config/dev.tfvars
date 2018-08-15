@@ -10,4 +10,5 @@ private_network_cidr = "192.168.100.0/24"
 
 # public network
 public_network = "neo_servers"
+public_ip_pool = "neo_servers"
 

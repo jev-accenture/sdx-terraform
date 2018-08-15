@@ -15,6 +15,11 @@ resource "openstack_compute_instance_v2" "server" {
   }
 }
 
+resource "openstack_compute_floatingip_associate_v2" "public_ip" {
+  floating_ip = "${openstack_networking_floatingip_v2.public_ip.address}"
+  instance_id = "${openstack_compute_instance_v2.server.id}"
+}
+
 resource "openstack_compute_secgroup_v2" "private_secgroup" {
   name        = "${var.name_prefix}-private_secgroup"
   description = "Securitu group for ${var.name_prefix} servers"
