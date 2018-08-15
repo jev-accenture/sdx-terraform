@@ -1,6 +1,7 @@
 name_prefix = "jev-dev"
 
 # server
+count = "2"
 image = "cirros"
 flavor = "m1.nano"
 ssh_key_file = "~/.ssh/id_rsa"

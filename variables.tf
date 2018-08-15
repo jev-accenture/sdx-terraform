@@ -3,6 +3,10 @@ variable "name_prefix" {
   default = "dev"
 }
 
+variable "count" {
+  type = "string"
+}
+
 variable "image" {
   type = "string"
 }
