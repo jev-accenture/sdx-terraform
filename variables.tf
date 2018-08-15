@@ -15,3 +15,7 @@ variable "ssh_key_file" {
   type = "string"
 }
 
+variable "private_network_cidr" {
+  type = "string"
+}
+

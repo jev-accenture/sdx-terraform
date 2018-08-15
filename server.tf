@@ -8,4 +8,9 @@ resource "openstack_compute_instance_v2" "server" {
   image_name  = "${var.image}"
   flavor_name = "${var.flavor}"
   key_pair = "${openstack_compute_keypair_v2.keypair.name}"
+
+  network {
+    uuid = "${openstack_networking_network_v2.private_network.id}"
+  }
 }
+
