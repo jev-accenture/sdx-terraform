@@ -3,3 +3,15 @@ variable "name_prefix" {
   default = "dev"
 }
 
+variable "image" {
+  type = "string"
+}
+
+variable "flavor" {
+  type = "string"
+}
+
+variable "ssh_key_file" {
+  type = "string"
+}
+
