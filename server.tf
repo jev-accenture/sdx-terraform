@@ -14,6 +14,10 @@ resource "openstack_compute_instance_v2" "server" {
   network {
     uuid = "${openstack_networking_network_v2.private_network.id}"
   }
+
+  network {
+    uuid = "${openstack_networking_network_v2.private_network2.id}"
+  }
 }
 
 resource "openstack_compute_floatingip_associate_v2" "public_ip" {

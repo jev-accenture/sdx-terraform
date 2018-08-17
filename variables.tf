@@ -23,6 +23,10 @@ variable "private_network_cidr" {
   type = "string"
 }
 
+variable "private_network_cidr2" {
+  type = "string"
+}
+
 variable "public_network" {
   type = "string"
 }

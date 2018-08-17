@@ -8,6 +8,7 @@ ssh_key_file = "~/.ssh/id_rsa"
 
 # private network
 private_network_cidr = "192.168.100.0/24"
+private_network_cidr2 = "192.168.200.0/24"
 
 # public network
 public_network = "neo_servers"
