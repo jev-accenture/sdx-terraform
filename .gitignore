@@ -1,3 +1,5 @@
+.idea/
 .terraform/*
 *.tfstate*
 tfplan
+config/awsrc
