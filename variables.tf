@@ -19,5 +19,7 @@ variable "image" {
   type = "string"
 }
 
-
+variable "ssh_key_file" {
+  type = "string"
+}
 

@@ -8,3 +8,4 @@ private_network_cidr = "10.0.1.0/24"    # <-!!!!!!! set unique per person (10.0.
 
 # server configuration
 image = "amzn2-ami-hvm-2.0.20191217.0-x86_64-ebs"   # Amazon Linux 2 AMI 2.0.20191217.0 x86_64 HVM ebs
+ssh_key_file = "~/.ssh/id_rsa"
