@@ -9,3 +9,7 @@ output "vpc_cird" {
 output "availability_zone" {
   value = "${aws_subnet.private_network.availability_zone}"
 }
+
+output "server_ami" {
+  value = "${data.aws_ami.linux_ami_hvm.id}"
+}
