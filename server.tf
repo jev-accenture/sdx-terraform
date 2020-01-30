@@ -57,3 +57,20 @@ resource "aws_security_group" "server_fw" {
     )
   )}"
 }
+
+resource "aws_instance" "server" {
+  count         = "${var.count}"
+  ami           = "${data.aws_ami.linux_ami_hvm.id}"
+  instance_type = "${var.flavor}"
+  key_name      = "${aws_key_pair.keypair.key_name}"
+  subnet_id     = "${aws_subnet.private_network.id}"
+  security_groups = ["${aws_security_group.server_fw.id}"]
+
+  tags = "${merge(
+    local.default_tags,
+    map(
+      "Name", "${var.name_prefix}-server-${count.index}"
+    )
+  )}"
+}
+

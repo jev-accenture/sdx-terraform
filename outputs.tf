@@ -13,3 +13,9 @@ output "availability_zone" {
 output "server_ami" {
   value = "${data.aws_ami.linux_ami_hvm.id}"
 }
+
+output "server_ips" {
+  # user: ec2-user
+  value = "${aws_instance.server.*.public_ip}"
+}
+

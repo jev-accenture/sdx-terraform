@@ -23,3 +23,11 @@ variable "ssh_key_file" {
   type = "string"
 }
 
+variable "count" {
+  type = "string"
+}
+
+variable "flavor" {
+  type = "string"
+}
+
