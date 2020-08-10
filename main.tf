@@ -1,6 +1,8 @@
 # Configure the AWS Provider
 provider "aws" {
-  # configuration should be provided through environment variables
+  # credentials configuration should be provided through AWS configure
+  profile = "default"
+  region  = "eu-central-1"
 }
 
 data "aws_caller_identity" "current" {}

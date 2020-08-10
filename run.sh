@@ -60,8 +60,8 @@ then
   export TF_LOG=DEBUG
 fi
 
-do_info "loading configuration..."
-source ./config/awsrc || do_error "failed to load AWS configuration"
+#do_info "loading configuration..."
+#source ./config/awsrc || do_error "failed to load AWS configuration"
 
 # Initialize the Terraform working directory.
 do_info "provider initialization..."
@@ -69,7 +69,7 @@ terraform get -update=true > /dev/null || do_error "failed to update modules"
 terraform init -input=false > /dev/null || do_error "failed to initialize providers"
 
 do_info "validation..."
-terraform validate -var-file=config/${__ENV}.tfvars -input=false || do_error "validation failed"
+terraform validate || do_error "validation failed"
 
 if [ "x$DESTROY" != "x" ]
 then
